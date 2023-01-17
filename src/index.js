@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const { use } = require('./routes/products');
 const cors = require('cors');
 require('dotenv').config();
-const userRoutes = require('./routes/products');
+const productRoutes = require('./routes/products');
 
 const app = express();
 //Asignamos el puerto o si no esta disponible toma otro por defecto
@@ -12,7 +12,7 @@ const port = process.env.PORT || 9000;
 // middleware
 app.use(cors());
 app.use(express.json());
-app.use('/api', userRoutes);
+app.use('/api', productRoutes);
 
 //routes
 app.get("/", (req, res) => {

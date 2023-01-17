@@ -32,9 +32,9 @@ router.get('/products/:id', (req, res) => {
 //update a product
 router.put('/products/:id', (req, res) => {
     const { id } = req.params
-    const { code, name, description, image, price, category, rating } = req.body
+    const {name, description, image, price, category, quantity, rating } = req.body
     productSchema
-        .updateOne({ _id: id }, {$set: {code, name, description, image, price, category, rating}})
+        .updateOne({ _id: id }, { $set: {name, description, image, price, category, quantity, rating } })
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 })

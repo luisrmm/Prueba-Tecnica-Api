@@ -20,14 +20,15 @@ GET http://localhost:9000/api/products HTTP/1.1
 GET http://localhost:9000/api/products/63c5d5a969104eaf8b22a06d HTTP/1.1
 
 ###
-PUT  http://localhost:9000/api/products/63c5dd67a8f8580a72579ea2 HTTP/1.1
+PUT  http://localhost:9000/api/products/63c71556a11c52ea83b656dc HTTP/1.1
 Content-Type: application/json
 
 {
+	"_id": "63c71556a11c52ea83b656dc",
 			"name": "Samsung Galaxy",
 			"description": "Smartphone 5G",
 			"image": "imagen_galaxy.jpg",
-			"price": 58,
+			"price": 88,
 			"category": "Electronics",
 			"quantity": 10,
 			"inventoryStatus": "LOWSTOCK",
@@ -35,4 +36,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE  http://localhost:9000/api/products/63c6022e8dc459b019548ed6 HTTP/1.1
+DELETE  http://localhost:9000/api/products/63c70ef9a11c52ea83b656cb HTTP/1.1
